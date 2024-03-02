@@ -50,7 +50,9 @@ public struct TextField4All: View {
                 .border(self.color)
                 .accessibilityLabel(self.textHint.accessibilityTextInfo)
                 .padding()
+#if os(iOS)
                 .autocapitalization(.none)
+#endif
         } else {
             TextField( textHint.text, text: $receivedText)
                 .font( .custom(self.textHint.font, size: self.textHint.size) )
@@ -58,7 +60,10 @@ public struct TextField4All: View {
                 .border(self.color)
                 .accessibilityLabel(self.textHint.accessibilityTextInfo)
                 .padding()
+#if os(iOS)
+            
                 .autocapitalization(.none)
+#endif
         }
     }
 }

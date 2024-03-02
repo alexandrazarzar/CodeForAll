@@ -1,3 +1,3 @@
-# Code4AllPackage
+# CodeForAllPackage
 
 A description of this package.

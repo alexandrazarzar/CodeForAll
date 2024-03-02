@@ -4,12 +4,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "Code4AllPackage",
+    name: "CodeForAllPackage",
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
-            name: "Code4AllPackage",
-            targets: ["Code4AllPackage"]),
+            name: "CodeForAllPackage",
+            targets: ["CodeForAllPackage"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -19,10 +19,10 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
-            name: "Code4AllPackage",
+            name: "CodeForAllPackage",
             dependencies: []),
         .testTarget(
-            name: "Code4AllPackageTests",
-            dependencies: ["Code4AllPackage"]),
+            name: "CodeForAllPackageTests",
+            dependencies: ["CodeForAllPackage"]),
     ]
 )
