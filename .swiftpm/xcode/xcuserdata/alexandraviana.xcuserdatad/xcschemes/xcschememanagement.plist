@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>CodeForAll.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>CodeForAllPackage.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,16 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>CodeForAll</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CodeForAllPackage</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CodeForAllPackageTests</key>
 		<dict>
 			<key>primary</key>
 			<true/>
