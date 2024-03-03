@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum AccessibleFontWeight {
+public enum AccessibleFontWeight {
     case regular
     case medium
     case semibold
@@ -27,7 +27,7 @@ enum AccessibleFontWeight {
     }
 }
 
-struct FAText: View {
+public struct FAText: View {
     var text:  String
     var color: Color
     var font:  Font
