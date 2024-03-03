@@ -8,25 +8,28 @@
 import SwiftUI
 import Accessibility
 
-struct FALoadingView: View {
+public struct FALoadingView: View {
     var viewName: String
-    var textHint: String
+    var hint: String
     var appearedAnnouncement: String
     var disappearedAnnouncement: String
     
-    init(
-        viewName: String, textHint: String = "", appearedAnnouncement: String = "", disappearedAnnouncement: String = ""
+    public init(
+        viewName: String,
+        hint: String = "",
+        appearedAnnouncement: String = "",
+        disappearedAnnouncement: String = ""
     ) {
         self.viewName = viewName
-        self.textHint = textHint
+        self.hint = hint
         self.appearedAnnouncement = appearedAnnouncement
         self.disappearedAnnouncement = disappearedAnnouncement
     }
     
-    var body: some View {
+    public var body: some View {
         ProgressView()
             .accessibilityLabel(viewName)
-            .accessibilityHint(textHint)
+            .accessibilityHint(hint)
 #if os(iOS)
             .onAppear(perform: {
                 UIAccessibility.post(notification: .announcement, argument: appearedAnnouncement)
@@ -42,7 +45,7 @@ struct FALoadingView: View {
 #Preview {
     FALoadingView(
         viewName: "Carregamento em andamento",
-        textHint: "Aguarde até que todas as informações sejam carregadas",
+        hint: "Aguarde até que todas as informações sejam carregadas",
         appearedAnnouncement: "sistema carreando informações",
         disappearedAnnouncement: "carregamento de informações finalizado"
     )

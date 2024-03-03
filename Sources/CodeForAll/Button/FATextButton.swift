@@ -1,13 +1,13 @@
 //
 //  SwiftUIView.swift
-//  
+//
 //
 //  Created by Alexandra Viana on 02/03/24.
 //
 
 import SwiftUI
 
-struct FATextButton: View {
+public struct FATextButton: View {
     var action: () -> Void
     var textObject: FAText
     var hint: String
@@ -30,8 +30,8 @@ struct FATextButton: View {
                 borderLength: CGFloat = 100,
                 borderHeight: CGFloat = 30,
                 isFilled: Bool = false,
-                fillColor: Color = Color.blue) {
-        
+                fillColor: Color = Color.blue
+    ) {
         self.action = action
         self.textObject = textLabel
         self.hint = hint
@@ -44,6 +44,7 @@ struct FATextButton: View {
         self.isFilled = isFilled
         self.fillColor = fillColor
     }
+    
     public var body: some View {
         Button (action: action ) {
             textObject

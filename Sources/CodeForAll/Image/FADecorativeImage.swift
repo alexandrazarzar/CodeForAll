@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct FADecorativeImage: View {
+public struct FADecorativeImage: View {
     let isSystemImage: Bool
     let imageName: String
     
-    init(_ imageName: String, isSystemImage: Bool = false) {
+    public init(_ imageName: String, isSystemImage: Bool = false) {
         self.imageName = imageName
         self.isSystemImage = isSystemImage
     }
     
-    var body: some View {
+    public var body: some View {
         if isSystemImage {
             Image(systemName: imageName)
                 .resizable()
@@ -35,8 +35,6 @@ struct FADecorativeImage: View {
 #Preview {
     VStack {
         FADecorativeImage("ATENCAO-FUNDO-PRETO")
-        
-        
         FADecorativeImage("exclamationmark.circle.fill",
                           isSystemImage: true)
         .padding(.horizontal, 20)

@@ -1,13 +1,13 @@
 //
 //  SwiftUIView.swift
-//  
+//
 //
 //  Created by Alexandra Viana on 02/03/24.
 //
 
 import SwiftUI
 
-struct FAToggle: View {
+public struct FAToggle: View {
     @Binding var enableToggle: Bool
     var toggleText: FAText
     var enabledLabel: String

@@ -1,13 +1,13 @@
 //
 //  SwiftUIView.swift
-//  
+//
 //
 //  Created by Alexandra Viana on 02/03/24.
 //
 
 import SwiftUI
 
-struct FATextField: View {
+public struct FATextField: View {
     @Binding var receivedText: String
     @Binding var isSecureField: Bool
     var label: FAText
@@ -33,6 +33,7 @@ struct FATextField: View {
         self._isSecureField = isSecureField
         self.isMandatory = isMandatory
     }
+    
     public var body: some View {
         if(isSecureField) {
             SecureField( label.text, text: $receivedText)
@@ -42,9 +43,9 @@ struct FATextField: View {
                 .border(color)
                 .padding()
                 .accessibilityLabel(updatedLabel)
-                #if os(iOS)
+#if os(iOS)
                 .autocapitalization(.none)
-                #endif
+#endif
         } else {
             TextField(label.text, text: $receivedText)
                 .font(label.font)
@@ -54,9 +55,14 @@ struct FATextField: View {
                 .padding()
                 .accessibilityLabel(updatedLabel)
                 .accessibilityValue(receivedText)
-                #if os(iOS)
+#if os(iOS)
                 .autocapitalization(.none)
-                #endif
+#endif
         }
     }
+}
+
+#Preview {
+    FATextField(label: FAText("Email"),
+                receivedText: .constant(""))
 }

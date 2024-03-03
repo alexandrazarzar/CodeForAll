@@ -1,24 +1,27 @@
 //
 //  SwiftUIView.swift
-//  
+//
 //
 //  Created by Alexandra Viana on 02/03/24.
 //
 
 import SwiftUI
 
-struct FADescriptiveImage: View {
+public struct FADescriptiveImage: View {
     let isSystemImage: Bool
     let imageName: String
     let accessibilityDescription: String
     
-    init(_ imageName: String, imageAccessibilityDescription: String, isSystemImage: Bool = false) {
+    public init(_ imageName: String,
+                imageAccessibilityDescription: String,
+                isSystemImage: Bool = false
+    ) {
         self.imageName = imageName
         self.accessibilityDescription = imageAccessibilityDescription
         self.isSystemImage = isSystemImage
     }
     
-    var body: some View {
+    public var body: some View {
         VStack {
             if isSystemImage {
                 Image(systemName: imageName)
@@ -38,8 +41,6 @@ struct FADescriptiveImage: View {
     VStack {
         FADescriptiveImage("ARTPROJECT-VANGOGH-STARRYNIGHT",
                            imageAccessibilityDescription: "Van Gogh's The Starry Night")
-        
-        
         FADescriptiveImage("moon.stars.fill",
                            imageAccessibilityDescription: "Noite estrelada",
                            isSystemImage: true)
