@@ -34,7 +34,6 @@ public struct FADecorativeImage: View {
 
 #Preview {
     VStack {
-        FADecorativeImage("ATENCAO-FUNDO-PRETO")
         FADecorativeImage("exclamationmark.circle.fill",
                           isSystemImage: true)
         .padding(.horizontal, 20)

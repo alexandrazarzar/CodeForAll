@@ -39,8 +39,6 @@ public struct FADescriptiveImage: View {
 
 #Preview {
     VStack {
-        FADescriptiveImage("ARTPROJECT-VANGOGH-STARRYNIGHT",
-                           imageAccessibilityDescription: "Van Gogh's The Starry Night")
         FADescriptiveImage("moon.stars.fill",
                            imageAccessibilityDescription: "Noite estrelada",
                            isSystemImage: true)
