@@ -50,9 +50,9 @@ public struct FAText: View {
     public var body: some View {
         if isHeader {
             accessibleText
+                .accessibilityAddTraits(.isHeader)
         } else {
             accessibleText
-                .accessibilityAddTraits(.isHeader)
         }
     }
     
